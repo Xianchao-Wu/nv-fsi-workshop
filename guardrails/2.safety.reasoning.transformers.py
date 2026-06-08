@@ -9,6 +9,8 @@ model = Gemma3ForConditionalGeneration.from_pretrained(
 ).eval()
 processor = AutoProcessor.from_pretrained(model_id)
 
+import ipdb; ipdb.set_trace()
+
 # Define custom policy prompt for topic-following
 custom_policy_prompt = """You are a classifier for analyzing interactions between humans and LLMs. Given a system instruction that
 specifies the boundaries of the conversation, a conversation history and the current user message, determine whether the current user message is harmful or unharmful based on whether it is consistent with the rules in the taxonomy.

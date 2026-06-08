@@ -1,0 +1,25 @@
+use vllm docker
+
+start vllm docker!
+
+1. at the beginning, pull the vllm docker:
+
+
+docker pull nvcr.io/nvidia/vllm:25.09-py3
+
+
+2. start
+
+more ./startvllm.sh
+
+
+#!/bin/bash
+
+docker run --gpus all \
+    --ipc=host \
+    -p 8000:8000 \
+    -v ~/.cache/huggingface:/root/.cache/huggingface \
+    nvcr.io/nvidia/vllm:25.09-py3 \
+    vllm serve \
+    nvidia/Nemotron-Content-Safety-Reasoning-4B
+

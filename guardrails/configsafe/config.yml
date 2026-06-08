@@ -8,11 +8,14 @@ models:
 
   # Content Safety Model served via vLLM (OpenAI-compatible API)
   - type: content_safety_reasoning
-    #engine: openai
-    engine: nim #openai
+    engine: openai
+    #engine: nim #openai
     model: nvidia/Nemotron-Content-Safety-Reasoning-4B
     parameters:
-      #openai_api_base: http://10.19.60.80:58352/v1/models
+      #openai_api_base: http://10.19.60.80:8000/v1/models
+      #base_url: http://10.19.60.80:8000/v1/models
+      base_url: http://10.19.60.80:8000/v1 # TODO change this ip address
+      #base_url: http://localhost:8000/v1
       temperature: 0.6
       top_p: 0.95
       age: 25
