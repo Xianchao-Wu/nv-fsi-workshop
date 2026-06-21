@@ -14,7 +14,7 @@ models:
     parameters:
       #openai_api_base: http://10.19.60.80:8000/v1/models
       #base_url: http://10.19.60.80:8000/v1/models
-      base_url: http://10.19.60.80:8000/v1 # TODO change this ip address
+      base_url: http://172.17.0.3:8000/v1 # TODO change this ip address
       #base_url: http://localhost:8000/v1
       temperature: 0.6
       top_p: 0.95
