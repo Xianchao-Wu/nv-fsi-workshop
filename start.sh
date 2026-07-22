@@ -6,4 +6,4 @@
 #########################################################################
 #!/bin/bash
 
-jupyter lab --ip=0.0.0.0 --port=8892 --no-browser --allow-root
+jupyter lab --ip=0.0.0.0 --port=8889 --no-browser --allow-root
